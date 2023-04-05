@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="icon" href="https://cdn.icon-icons.com/icons2/3921/PNG/512/you_can_toucan_yes_you_can_sticker_icon_249883.png">
 
 </head>
 
@@ -24,11 +25,11 @@
                     Accueil
                 </a>
 
-                <a class="navbar-item" href="/films">
+                <a class="navbar-item" href="/blog">
                     Films
                 </a>
 
-                <a class="navbar-item" href="/series">
+                <a class="navbar-item" href="/blog">
                     Séries
                 </a>
             </div>

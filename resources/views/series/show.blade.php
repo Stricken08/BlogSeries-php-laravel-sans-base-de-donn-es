@@ -1,21 +1,22 @@
 @extends('layouts.layout')
 
 @section('title', "Votre serie en detail")
-
-@section('content')
-<h1>{{ $nom }}</h1>
-<div class="text">
+<div class="tittleS">
+    @section('content')
+    <h1>{{ $serie['nom'] }}</h1>
+</div>
+<div class="textS">
     <ul>
-        <li>Pays d'origine : {{ $details['pays d origine'] }}</li>
+        <li>Pays d'origine : {{ $serie['pays'] }}</li>
         <br>
-        <li>Années de diffusion : {{ $details['Années de diffusion :'] }}</li>
+        <li>Années de diffusion : {{ $serie['Annes'] }}</li>
         <br>
-        <li>Genre : {{ $details['Genre'] }}</li>
+        <li>Genre : {{ $serie['genre'] }}</li>
         <br>
-        <li>Synopsis : {{ $details['Synopsis'] }}</li>
+        <li>Synopsis : {{ $serie['synopsis'] }}</li>
     </ul>
-    <img src="{{ asset('images/' . strtolower($nom) . '.jpeg') }}" alt="{{ $nom }}" />
-    <img src="{{ asset('images/' . strtolower($nom) . '.png') }}" alt="{{ $nom }}" />
+    <img src="{{ asset('images/' . strtolower($serie['nom']) . '.jpeg') }}" alt="{{ $serie['nom'] }}" />
+    <img src="{{ asset('images/' . strtolower($serie['nom']) . '.png') }}" alt="{{ $serie['nom'] }}" />
 </div>
 <a href="{{ route('blog.index') }}">Retour à la liste des séries</a>
 @endsection

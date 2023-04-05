@@ -3,6 +3,7 @@
 body {
     background-color: #f1f1f1;
     font-family: Arial, sans-serif;
+    margin: 0;
 }
 
 h1 {
@@ -222,8 +223,13 @@ a img {
 }
 
 .navbar {
-    background-color: #212121;
+    background-color: #212121ee;
     color: white;
+    /* position: fixed;
+    width: 100%;
+    top: 0;
+    height: 25%;
+    border-radius: 1em; */
 }
 
 .navbar-brand img {
@@ -252,4 +258,136 @@ a img {
 
 .navbar-end {
     display: flex;
+}
+
+/* Style du formulaire */
+.form form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #888;
+}
+
+/* Style des champs du formulaire */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Style du titre */
+.form h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Style des étiquettes */
+.form label {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Style des champs de saisie */
+.form input[type="text"],
+.form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+/* Style du bouton de soumission */
+.form button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    background-color: #6c757d;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form button[type="submit"]:hover {
+    background-color: #333;
+}
+
+/* Style du champ de saisie de fichier */
+.form input[type="file"] {
+    display: block;
+    margin-top: 10px;
+}
+
+/* Style des messages d'erreur */
+.error {
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Styles pour les éléments spécifiques */
+
+#hero {
+    background-image: url("https://example.com/cinema-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+}
+
+#hero h1 {
+    font-size: 60px;
+    color: #fff;
+    text-align: center;
+    margin-top: 200px;
+}
+
+#hero button {
+    background-color: #fff;
+    color: #2c3e50;
+}
+/* style show.blade */
+/* Titre de la page */
+.tittleS h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Liste des informations de la série */
+.textS ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.textS li {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Images de la série */
+.textS img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+/* Bouton de retour */
+a {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.2s ease;
+}
+
+a:hover {
+    background-color: #666;
 }

@@ -10,43 +10,40 @@
     <div class="series">
 
         @foreach($series as $nom => $series)
-        <h2>{{ $nom }}</h2>
+        <h2>{{ $series['nom'] }}</h2>
         <div class="flex">
 
             <div class="text">
                 <ul>
-                    <li>Pays d origine: {{ $series['pays d origine'] }}</li>
+                    <li>Pays d origine: {{ $series['pays'] }}</li>
                     <br>
-                    <li>Années de diffusion : {{ $series['Années de diffusion :'] }}</li>
+                    <li>Années de diffusion : {{ $series['annes'] }}</li>
                     <br>
-                    <li>Genre: {{ $series['Genre'] }}</li>
+                    <li>Genre: {{ $series['genre'] }}</li>
                     <br>
-                    <li>Synopsis: {{ $series['Synopsis'] }}</li>
+                    <li>Synopsis: {{ $series['synopsis'] }}</li>
                 </ul>
             </div>
             <div class="movie-card">
-                <h2>test</h2>
-                @if(file_exists(public_path('images/' . strtolower($nom) . '.png')))
-                <img src="{{ asset('images/' . strtolower($nom) . '.png') }}" alt="{{ $nom }}" />
-                @elseif(file_exists(public_path('images/' . strtolower($nom) . '.jpg')))
-                <img src="{{ asset('images/' . strtolower($nom) . '.jpg') }}" alt="{{ $nom }}" />
-                @elseif(file_exists(public_path('images/' . strtolower($nom) . '.jpeg')))
-                <img src="{{ asset('images/' . strtolower($nom) . '.jpeg') }}" alt="{{ $nom }}" />
+
+                @if(file_exists(public_path('images/' . strtolower($series['nom']) . '.png')))
+                <img src="{{ asset('images/' . strtolower($series['nom']) . '.png') }}" alt="{{ $nom }}" />
+                @elseif(file_exists(public_path('images/' . strtolower($series['nom']) . '.jpg')))
+                <img src="{{ asset('images/' . strtolower($series['nom']) . '.jpg') }}" alt="{{ $nom }}" />
+                @elseif(file_exists(public_path('images/' . strtolower($series['nom']) . '.jpeg')))
+                <img src="{{ asset('images/' . strtolower($series['nom']) . '.jpeg') }}" alt="{{ $nom }}" />
                 @else
                 <p>Aucune image n'a été trouvée.</p>
                 @endif
 
-                <p>paragraphe</p>
-                <form method="GET" action="{{ route('blog.show', ['blog' => $nom]) }}">
+                <p>© Touts droits reservés</p>
+                <form method="GET" action="{{ route('blog.show', ['blog' => $series['nom']]) }}">
                     <button type="submit">Voir détails</button>
                 </form>
             </div>
-            <form method="POST" action="{{ route('blog.destroy', ['blog' => $nom]) }}">
-                @csrf
-                @method('DELETE')
-                <button type="submit">❌</button>
-            </form>
+
         </div>
+        
         @endforeach
     </div>
 

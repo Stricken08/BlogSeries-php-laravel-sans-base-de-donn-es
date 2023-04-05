@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('title', 'Ajouter une série')
 @section('content')
-<div class="body">
+<div class="body form">
     <h1>Ajouter une série</h1>
     <form method="POST" action="/blog">
         @csrf

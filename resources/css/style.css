@@ -130,24 +130,3 @@ p {
     width: 30px;
     height: 30px;
 }
-
-/* Styles pour les éléments spécifiques */
-
-#hero {
-    background-image: url("https://example.com/cinema-hero.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 600px;
-}
-
-#hero h1 {
-    font-size: 60px;
-    color: #fff;
-    text-align: center;
-    margin-top: 200px;
-}
-
-#hero button {
-    background-color: #fff;
-    color: #2c3e50;
-}
